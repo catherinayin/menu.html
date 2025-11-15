@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Julia Mooncake – Home</title>
+  <title>Julia Mooncake – Menu</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,26 +23,23 @@
     }
 
     .page-wrapper {
-  width: 1440px;             
-  margin: 0 auto;           
-  min-height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-}
+      width: 1440px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
 
-.content-container {
-  width: 1200px;           
-  margin: 0 auto;           
-  padding: 0;             
-}
+    .content-container {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
     h1, h2, h3 {
       font-weight: 600;
       letter-spacing: 0.03em;
-    }
-
-    p {
-      line-height: 1.6;
     }
 
     a {
@@ -55,7 +52,17 @@
       text-decoration: underline;
     }
 
-    /* HEADER */
+    /* Simple helpers for fonts */
+
+    .karla {
+      font-family: 'Karla', sans-serif;
+    }
+
+    .quicksand {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    /* HEADER (same as index) */
 
     .site-header {
       background-color: #f4e7ff;
@@ -85,6 +92,10 @@
       font-family: 'Quicksand', sans-serif;
       font-weight: 700;
       letter-spacing: 0.12em;
+    }
+
+    .active {
+      text-decoration: underline;
     }
 
     .logo-wrapper {
@@ -121,54 +132,7 @@
       text-decoration: none;
     }
 
-    /* HERO */
-
-   .hero-image-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 16px auto;
-  padding-left: 120;    
-}
-
-.hero-image {
-  max-width: 1000px;
-  width: 100%;
-  display: block;
-}
-
-
-  .intro-text {
-    font-family: 'Karla', sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-top: 12px;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-
- .intro-text-area {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-    .intro-text-box {
-  max-width: 1000px;   
-  margin: 0 auto;    
-}
-
-.intro-text-wrapper {
-  max-width: 1500px;
-  margin: 0 auto;      
-}
-
-
-    .intro-bar {
-      background-color: #cdb1d6;
-      padding: 12px 0;
-    }
-
-    /* FOOTER */
+    /* FOOTER (same as index) */
 
     .site-footer {
       background-color: #f4e7ff;
@@ -178,6 +142,7 @@
       letter-spacing: 0.08em;
       color: #241728;
       border-top: 2px solid #e4d3f4;
+      margin-top: 60px;
     }
 
     .footer-inner {
@@ -232,137 +197,223 @@
     .site-footer a:active {
       opacity: 0.7;
     }
-/* TOP SELLERS SECTION */
 
-.top-sellers-section {
-  background-color: #ffffff;
-  padding: 0px 0 80px;
-}
+    /* ===== MENU PAGE SECTIONS ===== */
 
-/* lanterns + title row */
-.top-sellers-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  margin-bottom: 32px;
-}
+    .menu-hero {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
 
-.lantern {
-  height: 54px;
-  width: auto;
-}
+    .menu-hero-title {
+      font-family: 'Quicksand', sans-serif; /* WHAT EVERYONE'S... */
+      font-size: 22px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
 
-.lantern-right {
-  height: 110px;   
-  
-}
-.lantern-left {
-  margin-top: -56px;  
-}
+    /* Yellow band + 3 mooncakes */
 
-.top-sellers-title {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
+    .menu-top-wrapper {
+      position: relative;
+      margin-bottom: 18px;
+    }
 
-/* MAIN AREA */
-.top-sellers-main {
-  position: relative;
-  text-align: center;
-}
+    .menu-top-band {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 140px;
+      background-color: #FFD684;
+      z-index: 0;
+    }
 
-/* yellow band behind mooncakes */
-.top-sellers-band {
-  position: relative;
-  width: 100%;
-  margin: 0 auto 24px;
-}
+    .menu-top-images {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.top-sellers-band::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 140px;
-  background-color: #FFD684;
-  z-index: 0;
-  border-radius: 4px;
-}
+    .menu-top-images img {
+      max-width: 32%;
+      height: auto;
+      display: block;
+    }
 
-.top-sellers-image {
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: 0 auto;
-  max-width: 90%;
-}
+    .menu-top-labels {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      font-family: 'Karla', sans-serif; /* Double Yolk / Sampler / Nuts */
+      font-size: 15px;
+    }
 
-/* labels under */
-.top-sellers-labels {
-  display: flex;
-  justify-content: space-between;
-  max-width: 850px;
-  margin: 0 auto 40px;
-  font-family: 'Karla', sans-serif;
-  font-size: 15px;
-}
+    .menu-top-labels span {
+      flex: 1;
+      text-align: center;
+    }
 
-.top-sellers-labels span {
-  flex: 1;
-  text-align: center;
-}
+    .menu-cta {
+      background-color: #FFBA51;
+      color: #000000;
+      border: none;
+      padding: 15px 52px;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif; /* ORDER NOW */
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 8px;
+    }
 
-/* Button */
-.menu-cta {
-  background-color: #FFBA51; /* NEW COLOR */
-  color: black;
-  border: none;
-  padding: 15px 52px;
-  border-radius: 999px;
-  font-family: 'Karla', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
+    .menu-cta:hover {
+      filter: brightness(1.08);
+    }
 
-.menu-cta:hover {
-  filter: brightness(1.08);
-}
+    /* Description + pricing card */
 
-/* bunny on left */
-.bunny-image {
-  position: absolute;
-  left: 0;
-  bottom: -40px;
-  width: 140px;
-  z-index: 3;
-}
+    .menu-description {
+      padding: 40px 0 32px;
+      text-align: center;
+    }
 
+    .menu-description p {
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
 
+    .pricing-card {
+      background-color: #f0d5ff;
+      border-radius: 18px;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      max-width: 540px;
+      margin: 0 auto;
+      font-family: 'Karla', sans-serif;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .pricing-column-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .pricing-column p {
+      margin: 0;
+      white-space: pre-line; /* so the line breaks you typed show up */
+    }
+
+    /* Grid of flavours */
+
+    .menu-grid {
+      padding: 56px 0 32px;
+    }
+
+    .menu-section-title {
+      font-family: 'Quicksand', sans-serif; /* OUR FLAVOURS */
+      font-size: 20px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .menu-grid-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .menu-item-card {
+      flex: 1;
+      border-radius: 24px;
+      border: 2px solid #1c1322;
+      padding: 18px 18px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: 'Karla', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .menu-item-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px 18px 12px 12px;
+      margin-bottom: 12px;
+    }
+
+    .menu-item-title {
+      font-weight: 700;
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+
+    .menu-item-desc {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .menu-item-badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background-color: #e7d5ff;
+      font-size: 11px;
+      font-family: 'Karla', sans-serif;
+      margin-bottom: 6px;
+    }
+
+    .menu-bunny {
+      display: block;
+      margin: 0 auto 32px;
+      width: 80px;
+      height: auto;
+    }
+
+    .menu-ready {
+      text-align: center;
+      padding-top: 8px;
+      font-family: 'Karla', sans-serif;
+      font-size: 15px;
+    }
+
+    .menu-ready button {
+      margin-top: 12px;
+    }
   </style>
 </head>
 
 <body>
   <div class="page-wrapper">
 
-    <!-- HEADER -->
+    <!-- HEADER (same as index) -->
     <header class="site-header">
       <div class="header-inner content-container">
 
         <nav class="nav-left">
-          <a href="menu.html">Menu</a>
+          <a href="menu.html" class="active">Menu</a>
           <a href="about.html">About</a>
         </nav>
 
         <div class="logo-wrapper">
-          <a href="#">
-            <img src="logo.png" alt="Julia Mooncake logo">
+          <a href="index.html">
+            <img src="logo1.png" alt="Julia Mooncake logo">
           </a>
         </div>
 
@@ -374,63 +425,138 @@
       </div>
     </header>
 
-    <!-- HERO IMAGE -->
-    <div class="content-container">
-      <div class="hero-image-wrapper">
-        <img src="story1.png" class="hero-image" alt="Bunnies making mooncakes">
-      </div>
-    </div>
+    <!-- MAIN MENU CONTENT -->
+    <main>
 
-    <!-- TEXT UNDER IMAGE -->
-    
-<div class="content-container intro-text-area">
-  <div class="intro-text-box">
-    <p class="intro-text">
-      At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
-      a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
-    </p>
-  </div>
-</div>
+      <!-- TOP HERO SECTION -->
+      <section class="menu-hero">
+        <div class="content-container">
+          <h1 class="menu-hero-title">WHAT EVERYONE’S OVER THE MOON ABOUT</h1>
 
-   <!-- THIN PURPLE BAR -->
-<div class="intro-bar"></div>
-<!-- TOP SELLERS SECTION -->
-<section class="top-sellers-section">
+          <div class="menu-top-wrapper">
+            <div class="menu-top-band"></div>
 
-  <!-- lanterns + title -->
-<div class="content-container top-sellers-header">
-  <img src="lone.png" alt="Lantern" class="lantern lantern-left">
-  <h2 class="top-sellers-title">TOP SELLERS</h2>
-  <img src="ltwo.png" alt="Lantern" class="lantern lantern-right">
-</div>
+            <div class="menu-top-images">
+              <img src="dubyolk.png" alt="Double Yolk White Lotus">
+              <img src="pack.png" alt="Deluxe Sampler Pack">
+              <img src="nuts.png" alt="Mixed Nuts">
+            </div>
+          </div>
 
+          <div class="menu-top-labels">
+            <span>Double Yolk White Lotus</span>
+            <span>Deluxe Sampler Pack</span>
+            <span>Mixed Nuts</span>
+          </div>
 
-  <div class="content-container top-sellers-main">
+          <button class="menu-cta">ORDER NOW</button>
+        </div>
+      </section>
 
-    <!-- YELLOW BAND WITH MOONCAKES SITTING ON TOP -->
-    <div class="top-sellers-band">
-      <img src="3mc.png" alt="Top Selling Mooncakes" class="top-sellers-image">
-    </div>
+      <!-- DESCRIPTION + PRICING -->
+      <section class="menu-description">
+        <div class="content-container">
+          <p>
+            Discover our handcrafted mooncakes, made with traditional recipes and locally sourced
+            ingredients. Each one is baked with care to bring you warmth, nostalgia, and a taste of celebration.
+          </p>
 
-    <!-- labels under -->
-    <div class="top-sellers-labels">
-      <span>Double Yolk White Lotus</span>
-      <span>Deluxe Sampler Pack</span>
-      <span>Mixed Nuts</span>
-    </div>
+          <div class="pricing-card">
+            <div class="pricing-column">
+              <div class="pricing-column-title">Sizes:</div>
+              <p>
+• Small  $3
+• Large  $6
+              </p>
+            </div>
 
-    <!-- button -->
-    <button class="menu-cta">CHECK OUT THE MENU</button>
+            <div class="pricing-column">
+              <div class="pricing-column-title">Bundles:</div>
+              <p>
+• 4-Pack (Small)  $12
+• 4-Pack (Large)  $24
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- bunny -->
-    <img src="bunnylant.png" alt="Bunny holding lantern" class="bunny-image">
+      <!-- FLAVOURS GRID -->
+      <section class="menu-grid">
+        <div class="content-container">
+          <h2 class="menu-section-title">OUR FLAVOURS</h2>
 
-  </div>
+          <!-- Row 1 -->
+          <div class="menu-grid-row">
+            <article class="menu-item-card">
+              <img src="pandan.png" alt="Pandan Delight">
+              <h3 class="menu-item-title">Pandan Delight</h3>
+              <p class="menu-item-desc">
+                Fragrant pandan-infused lotus paste with a smooth, aromatic finish.
+              </p>
+            </article>
 
+            <article class="menu-item-card">
+              <img src="redbean.png" alt="Red Bean">
+              <h3 class="menu-item-title">Red Bean</h3>
+              <p class="menu-item-desc">
+                Classic sweet red bean filling, soft and delicately earthy.
+              </p>
+            </article>
 
-</section>
+            <article class="menu-item-card">
+              <span class="menu-item-badge">Popular</span>
+              <img src="dubyolk.png" alt="Double Yolk White Lotus">
+              <h3 class="menu-item-title">Double Yolk White Lotus</h3>
+              <p class="menu-item-desc">
+                Silky white lotus paste with two golden salted egg yolks.
+              </p>
+            </article>
+          </div>
 
-    <!-- FOOTER -->
+          <img src="holdup.png" alt="Bunny holding mooncake" class="menu-bunny">
+
+          <!-- Row 2 -->
+          <div class="menu-grid-row">
+            <article class="menu-item-card">
+              <img src="oneyolk.png" alt="Single Yolk White Lotus">
+              <h3 class="menu-item-title">Single Yolk White Lotus</h3>
+              <p class="menu-item-desc">
+                Creamy white lotus paste paired with a rich salted egg yolk.
+              </p>
+            </article>
+
+            <article class="menu-item-card">
+              <span class="menu-item-badge">Popular</span>
+              <img src="nuts.png" alt="Mixed Nuts">
+              <h3 class="menu-item-title">Mixed Nuts</h3>
+              <p class="menu-item-desc">
+                Crunchy mix of nuts and seeds with a hint of sweetness and spice.
+              </p>
+            </article>
+
+            <article class="menu-item-card">
+              <img src="sesame.png" alt="Black Sesame Gold">
+              <h3 class="menu-item-title">Black Sesame Gold</h3>
+              <p class="menu-item-desc">
+                Roasted black sesame filling with a deep, nutty aroma and gold-dusted top.
+              </p>
+            </article>
+          </div>
+
+          <img src="holdup2.png" alt="Bunny holding mooncake" class="menu-bunny">
+
+          <!-- Ready CTA -->
+          <div class="menu-ready">
+            <p>Ready to try your favourites?</p>
+            <button class="menu-cta">GET YOUR MOONCAKES</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER (same as index) -->
     <footer class="site-footer">
       <div class="footer-inner content-container">
 
@@ -467,13 +593,6 @@
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="9" />
                 <polyline points="12 7 12 12 15 14" />
-              </svg>
-              <span>MON–FRI, 10AM – 6PM</span>
-            </div>
-
-            <div class="footer-contact-item">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.13 4.1 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               <span>MON–FRI, 10AM – 6PM</span>
             </div>
